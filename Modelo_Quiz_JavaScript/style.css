@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.container {
+    margin-top: 100px;
+    background-color: rgb(164, 164, 233);
+}
+
+.quiz-class {
+    font-size: 20px;
+}
+
+.quiz-class p {
+    font-size: 25px;
+}
+
+.modal {
+    text-align: center;
+    background-color: rgb(153, 121, 81);
+    margin-block-start: 30%;
+    font-size: 25px;
+}
