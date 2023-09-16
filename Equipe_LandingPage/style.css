@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.container .navbar{
+    height: 100px;
+    display: flex; 
+}
+
+.container .navbar .left{
+    height: 100%;
+    display: flex;
+    float: left;
+}
+
+.container .navbar .left img{
+    height: 100px;
+    position: absolute;
+    left: 35px;
+}
+
+.container .navbar .right{
+    display: flex;
+    height: 100px;
+    float: right;
+    position: absolute;
+    right: 50px;
+}
+
+.container .navbar .right button{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 7px 17px;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    border-color: #008937;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container .navbar .right button a{
+    text-decoration: none;
+    color: black;
+    padding: 7px 17px;
+    margin: none;
+    display: block;
+}
+
+.container .navbar .right button:hover a {
+    color: white;
+}
+
+.container .navbar .right button:hover{
+    background-color: #008937;
+    color: white;
+}
+
+.container .content {
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 395px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #46bf76;
+}
+
+.Txt1 {
+ margin-left: 355px;
+ font-family: monospace;
+ color: #16ab52;
+}
+
+.Txt2{
+    color:#16ab52;
+    font-weight: bold;
+}
+
+.container .separador {
+    border-top: 5px double #16ab52;
+}
+.container .conteudo{
+    display: flex;
+}
+
+.container .projeto{
+        text-align: left;
+        font-size: 20px;
+        margin: 50px 50px 0 25px;
+        border: 5px groove #16ab52;
+        padding: 50px;
+
+}
+
+
+.container .projeto #titulo{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 50px;
+}
+.container .video{ 
+    margin-right: 25px;
+    margin-top: 50px;
+    border: 5px groove #16ab52;
+    padding: 25px 25px 0 25px;
+}
+
+.container .video #texto-video {
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-right: auto;
+}
