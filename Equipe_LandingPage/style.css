@@ -67,6 +67,8 @@ body{
     color: white;
 }
 
+/*Parte de textos e o vídeo */
+
 .container .content {
     font-size: 50px;
     justify-content: center;
@@ -90,6 +92,7 @@ body{
 .container .separador {
     border-top: 5px double #16ab52;
 }
+
 .container .conteudo{
     display: flex;
 }
@@ -103,12 +106,12 @@ body{
 
 }
 
-
 .container .projeto #titulo{
     text-align: center;
     margin-bottom: 25px;
     font-size: 50px;
 }
+
 .container .video{ 
     margin-right: 25px;
     margin-top: 50px;
@@ -121,4 +124,120 @@ body{
     margin-bottom: 15px;
     text-align: center;
     margin-right: auto;
+}
+ /* Inferior com botão e avaliações */
+  /*Verificar cor de botão para chamar mais atenção*/
+  .container .cadastro button{
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    font-weight: 400;
+    padding: 7px 500px;
+    background: #008937;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 50px auto auto 50px ;
+}
+
+.container .cadastro button a{
+    color: white;
+    text-decoration: none;
+}
+
+.container .cadastro button:hover{
+    background-color: white;
+    border-color: #008937;
+}
+
+.container .cadastro button:hover a{
+    color: #008937;
+}
+
+.container .provas-sociais {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container .provas-sociais .provasocial {
+    display: flex;
+    max-width: fit-content;
+    margin-top: 25px;
+}
+
+.container .provas-sociais .provasocial { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .provas-sociais  .todosalunos {
+    text-align: center;
+    margin: 0 15px 0 25px;
+    border: 1px solid black;
+    padding: 15px;
+    list-style: none;
+}
+
+.container .provas-sociais .todosalunos .nome {
+    margin-top: 15px;
+}
+
+.todosalunos img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    margin-left: 175px;
+    margin-right: 175px;
+  }
+
+  /* final da página */
+
+    .footer {
+    margin-top: 80px;
+    border-top: 5px double #16ab52;
+  }
+
+    .final-left .sobre a{
+    text-decoration: none;
+    text-align: left;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 25px;
+    display: block;
+  }
+
+  .final-left .icons {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 35px;
+    margin-right: 10px;
+    gap: 30px;
+  }
+
+  .final-right{
+    display: block;
+    text-align: right;
+    margin-right: 50px;
+    font-size: 20px;
+    word-spacing: 25px;
+    margin-top: -25px;
+    position: relative;
+  }
+
+  .final-right a{
+    text-decoration: none;
+  }
+
+  .final-right img{
+    height: 100px;
+    position: absolute;
+    display: block;
+    right: 0;
+    margin-right: -75px;
+    bottom: 100px;
+
 }
