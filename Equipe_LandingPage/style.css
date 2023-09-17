@@ -173,7 +173,7 @@ body{
 
 .container .provas-sociais  .todosalunos {
     text-align: center;
-    margin: 0 15px 0 25px;
+    margin: 0 15px 0 15px;
     border: 1px solid black;
     padding: 15px;
     list-style: none;
