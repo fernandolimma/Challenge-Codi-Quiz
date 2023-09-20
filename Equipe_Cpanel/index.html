@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cpanel</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/modal.css">
+
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+
+    <!-- header começo -->
+    <header>
+        <label for="check">
+            <ion-icon name="menu-outline" id="sidebar_btn"></ion-icon>
+        </label>
+
+        <div class="left">
+            <h3> Menu <span>OnLine</span></h3>
+        </div>
+        <div class="right">
+            <a href="#"" class=" sair_btn">Sair</a>
+        </div>
+    </header>
+    <!-- header final -->
+
+    <!-- sidebar começo -->
+    <div class="sidebar">
+        <center>
+            <img src="/image/ana.jpg" class="image" alt="">
+            <h2>Ana</h2>
+        </center>
+        <a href="#" onclick="openModal('Perfil')"><ion-icon
+                name="person-circle-outline"></ion-icon><span>Perfil</span></a>
+
+        <a href="#" onclick="openModal_2('Quiz')"><ion-icon
+                name="clipboard-outline"></ion-icon><span>Quiz</span></a>
+
+        <a href="#" onclick="openModal_3('Relatórios')"><ion-icon
+                name="stats-chart-outline"></ion-icon><span>Relatórios</span></a>
+
+        <a href="#" onclick="openModal_4('Configurações')"><ion-icon
+                name="settings-outline"></ion-icon><span>Configurações</span></a>
+
+        <a href="#" onclick="openModal_5('Tutorial')"><ion-icon 
+                name="logo-youtube"></ion-icon><span>Tutorial</span></a>
+    </div>
+    <!-- sidebar final -->
+
+    <div class="content">
+        <!-- modal perfil -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle">Título do Modal</h2>
+                <div>
+                    <h2>Conteúdo da modal</h2>
+
+                    <h3># CRUD de usuários</h3>
+                </div>
+                <div>
+                    <p>Input Nome:</p>
+                </div>
+                <div>
+                    <p>Input Foto:</p>
+                </div>
+                <div>
+                    <p>Input Power:</p>
+                </div>
+                
+                <br><button id="closeModal" onclick="closeModal()">Fechar</button>
+            </div>
+        </div>
+        
+        <!-- modal quiz -->
+        <div id="modal_2" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle_2">Título do Modal</h2>
+                
+                <div>
+                    <h3># CRUD de Perguntas & Respostas</h3>
+                </div>
+                <div>
+                    <h3>Input da Pergunta</h3>
+                </div>
+                <div>
+                    <h3>Input da Respostas</h3>
+                    <p>Input qual a resposta correta?</p>
+                </div>
+
+                <br><button id="closeModal_2" onclick="closeModal_2()">Fechar</button>
+            </div>
+        </div>
+
+        <!-- modal relatórios -->
+        <div id="modal_3" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle_3">Título do Modal</h2>
+                <div>
+                    <h3>#Dashboard de Relatórios</h3>
+                </div>
+                <div>
+                    <p>Relatórios</p>
+                </div>
+                <br><button id="closeModal_3" onclick="closeModal_3()">Fechar</button>
+            </div>
+        </div>
+
+        <!-- modal configurações -->
+        <div id="modal_4" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle_4">Título do Modal</h2>
+                <div>
+                    <h3>#Configurações</h3>
+                </div>
+                <div>
+                    <p>Input link do facebook</p>
+                </div>
+                <div>
+                    <p>Inout link do Instagram</p>
+                </div>
+                <br><button id="closeModal_4" onclick="closeModal_4()">Fechar</button>
+            </div>
+        </div>
+
+        <!-- modal vídeo aulas -->
+        <div id="modal_5" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle_5">Título do Modal</h2>
+                <div>
+                    <h3>#Tutorial</h3>
+                </div>
+                <div>
+                    <p>Vídeo aula com tutorial de uso do App</p>
+                </div>
+                <br><button id="closeModal_5" onclick="closeModal_5()">Fechar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/js/modal.js"></script>
+
+</body>
+
+</html>
