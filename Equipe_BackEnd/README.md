@@ -27,3 +27,17 @@ $ npm run dev
 ```
 
 O backend está rodando em `localhost:8888`
+
+Backend 
+tabela usuários 
+nome
+email
+senha
+idade
+cidade
+estado
+telefone
+obs: Termos e Condições 
+# db corpo da pergunta - opções 
+com as respostas do usuário, temos: - Tempo de resposta total - Tempo de resposta por questão - número de questão erradas -
+números de acertadas - números de repetições - se ele acertou todas (valor booleado)
