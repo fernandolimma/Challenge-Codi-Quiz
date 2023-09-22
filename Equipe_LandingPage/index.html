@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treinamento Curso | Design e Sustentabilidade</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
     <div class="container">
@@ -12,14 +13,53 @@
             <div class="left">
                 <img src="Marca-1024x192.png" alt="Design e Expertise">
             </div>
+            <!-- Configuração do botão-->
+
             <div class="right">
-                <button><a href="#">Login</a></button>
+                <nav class="nav">
+                    <button class="button" id="form-open">Login</button>
+                  </nav>
             </div>
-        </nav>
+            <section class="home">
+                <div class="form_container">
+                  <i class="uil uil-times form_close"></i>
+                  <!-- Login From -->
+                  <div class="form login_form">
+                    <form action="#">
+                      <h2>Login</h2>
+          
+                      <div class="input_box">
+                        <input type="email" placeholder="Insira seu e-mail" required />
+                        <i class="uil uil-envelope-alt email"></i>
+                      </div>
+                      <div class="input_box">
+                        <input type="password" placeholder="Insira sua senha" required />
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                      </div>
+          
+                      <div class="option_field">
+                        <span class="checkbox">
+                          <input type="checkbox" id="check" />
+                          <label for="check" class="remember">Lembre-me</label>
+                        </span>
+                        <a href="#" class="forgot_pw">Esqueceu sua senha?</a>
+                      </div>
+          
+                      <button class="button">Entre agora!</button>
+          
+                      <div class="novaconta">Não tem uma conta? <a href="#">Cadastre-se!</a></div>
+                    </form>
+                  </div>
+                </div>
+              </section>
+          
+              <script src="script.js"></script>
+            <!-- Configuração do botão (fim)-->
         <div class="content">
-            <h1 class="Txt1">Design &</h1>
-            <h1 class="Txt2">Sustentabilidade</h1>
+          <!--  <img src="texttitle.png" alt="Design & Sustentabilidade"> -->
         </div>
+        </nav>
         <div class="separador"></div>
         <div class="conteudo">
             <div class="projeto">
@@ -61,8 +101,8 @@
             <h1>Avaliações dos alunos</h1>
         <ol class="provasocial">
             <li class="todosalunos">
-            <p>
                 <img src="aluno1.png" alt="aluno1" width="100">
+            <p>
                 Não imaginava o quanto o uso de quizzes de perguntas e respostas seria impactante. 
                 A metodologia de ensino por meio de quizzes tornou o aprendizado muito mais envolvente e eficaz. 
                 As perguntas desafiadoras me incentivaram a estudar de forma mais atenta e aprofundada. Além disso, 
@@ -71,8 +111,8 @@
                 <p class="nome"><i>- Beth Silva -</i></p>
             </li>
             <li class="todosalunos">
-            <p>
                 <img src="aluno2.jpg" alt="aluno2" width="100">
+            <p>
                 Aprendi mais nos últimos meses do que em anos de ensino tradicional. 
                 A possibilidade de testar meus conhecimentos e competir comigo mesmo me incentivou a estudar todos os dias. 
                 As perguntas variadas e desafiadoras mantiveram meu interesse e me motivaram a buscar respostas corretas. 
@@ -82,8 +122,8 @@
                 
             </li>
             <li class="todosalunos">
-            <p>
-                <img src="aluno3.jpg" alt="aluno3" width="100">
+                 <img src="aluno3.jpg" alt="aluno3" width="100">
+            <p>                
                 Como estudante online, depender apenas de leituras e palestras pode ser desafiador. 
                 No entanto, desde que minha instituição começou a incorporar quizzes interativos em seus cursos, 
                 minha experiência de aprendizado melhorou significativamente. As perguntas desafiadoras me desafiam a 
