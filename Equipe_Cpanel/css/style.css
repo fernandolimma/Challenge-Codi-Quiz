@@ -1,0 +1,138 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  header {
+      position: fixed;
+      background: #9CCE98;
+      padding: 20px;
+      width: 100%;
+      height: 30px;
+  }
+
+  .left h3 {
+      color: #fff;
+      margin: 0;
+      /* text-transform: uppercase; */
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: -5px;
+  }
+
+  .left span {
+      color: #359B2C;
+  }
+
+  .sair_btn {
+      padding: 5px;
+      background: #359B2C;
+      text-decoration: none;
+      float: right;
+      margin-top: -40px;
+      margin-right: 40px;
+      border-radius: 2px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+  }
+
+  .sair_btn:hover {
+      background: #359B2C
+      ;
+  }
+
+  .sidebar {
+      position: fixed;
+      width: 250px;
+      height: 100%;
+      margin-top: 70px;
+      padding-top: 30px;
+      left: 0;
+      background: #59AD51;
+      transition: 0.5s;
+      transition-property: left;
+  }
+
+  .sidebar .image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+
+  .sidebar h2 {
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 20px;
+  }
+
+  .sidebar a {
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 60px;
+      text-decoration: none;
+      padding-left: 40px;
+      box-sizing: border-box;
+      transition: 0.5s;
+      transition-property: backgroud;
+  }
+
+  .sidebar a:hover {
+      background: #359B2C;
+  }
+
+  .sidebar ion-icon {
+    padding-right: 10px;
+  }
+
+  label #sidebar_btn {
+    z-index: 1;
+    position: fixed;
+    left: 300px;
+    color: #fff;
+    font-size: 25px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: color;    
+  }
+
+  label #sidebar_btn:hover {
+    color: #5BAE54;
+  }
+
+  #check:checked ~ .sidebar {
+    left: -190px;
+  }
+
+  #check:checked ~ .sidebar a span {
+    display: none;
+  }
+
+  #check:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+  }
+
+  .content {
+    background: url(/image/designesustentabilidade.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  #check:checked ~ .content {
+    margin-left: 60px;
+  }
+
+  #check {
+    display: none;
+  }
+

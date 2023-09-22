@@ -1,5 +1,7 @@
 let currentQuestion = 0;
 let score = 0;
+let previousQuestion = 0; // Variável para rastrear a pergunta anterior
+
 
 const quizData = [
     {
@@ -47,12 +49,26 @@ function loadQuestion() {
 
 function checkAnswer(selectedIndex) {
     const correctIndex = quizData[currentQuestion].resposta_correta;
-
+    
+    
     if (selectedIndex === correctIndex) {
         showPopup("correct-popup");
         score++;
+        
     } else {
         showPopup("wrong-popup");
+        document.getElementById("try-again-button").addEventListener("click", goBackToPreviousQuestion);
+        // Armazene a pergunta atual como a pergunta anterior
+        previousQuestion = currentQuestion;
+    }
+    
+}
+
+function goBackToPreviousQuestion() {
+    // Volte para a pergunta anterior, se houver alguma
+    if (previousQuestion >= 0) {
+        currentQuestion = previousQuestion;        
+        loadQuestion();
     }
 }
 
