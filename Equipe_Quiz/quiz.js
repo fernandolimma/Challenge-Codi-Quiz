@@ -1,6 +1,6 @@
 let currentQuestion = 0;
 let score = 0;
-let previousQuestion = 0; // Adicione uma variável para rastrear a pergunta anterior
+let previousQuestion = 0; // Variável para rastrear a pergunta anterior
 
 
 const quizData = [
