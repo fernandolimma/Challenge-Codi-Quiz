@@ -330,11 +330,7 @@ body{
 
 .container .provas-sociais .provasocial .todosalunos {
     text-align: center;
-<<<<<<< HEAD
     margin: 0 15px;
-=======
-    margin: 0 15px 0 15px;
->>>>>>> 6e1fd0d8f7ca52c7a8a33c55541e2b7326238bac
     border: 1px solid black;
     padding: 15px;
     list-style: none;
@@ -405,7 +401,6 @@ body{
     bottom: 100px;
 }
 
-<<<<<<< HEAD
 
 /* Tentar usar palheta de cores para captar atenção, usar o site da dankicode como exemplo de landing page e retirar algumas ideias 
 como FAQ e transição de cores */
@@ -450,6 +445,3 @@ como FAQ e transição de cores */
     Segunda resposta.
   </div>
 </div> */
-=======
-}
->>>>>>> 6e1fd0d8f7ca52c7a8a33c55541e2b7326238bac
