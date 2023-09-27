@@ -6,15 +6,9 @@ import http from "http";
 import sf from "fs";
 import path from "path";
 
-const filePath = 'Equipe_LandingPage\index.html';
-
-const app = express();
-app.use(cors());
-
-
-
+const server_path = path.resolve(__dirname, 'Equipe_BackEnd\src\server.js');
 const server = http.createServer((req,res) => {
-    let pathFile = path.join(__dirname, 'Equipe_LandingPage', req.url ==='/' ? 'index.html' : req.url);
+    let filePath = path.join(__dirname, 'Equipe_LandingPage', req.url ==='/' ? 'index.html' : req.url);
 
     fs.readFile(filePath, (err, data) => {
         if (err){
@@ -38,6 +32,7 @@ function getContentType(filePath) {
     }
 }
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
+server.listen(3000, () => {
     console.log("Servidor rodando na porta 3000.")
 })
