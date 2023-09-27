@@ -1,0 +1,1 @@
+essa pasta salva as informações e acessa ao banco de dados

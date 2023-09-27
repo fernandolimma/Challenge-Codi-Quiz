@@ -14,11 +14,6 @@ db_user.serialize(()=> {
         estado TEXT,
         telefone TEXT,
         termos INTEGER DEFAULT 0,
-        tempo_resposta_total FLOAT DEFAULT 0,
-        tempo_resposta_questao FLOAT DEFAULT 0,
-        repeticoes INTEGER DEFAULT 0,
-        evolução FLOAT DEFAULT 0,
-        todas_certas INTEGER DEFAULT 0,
     ) 
     `)
 })
@@ -33,7 +28,11 @@ db_perguntas.serialize(()=>{
         corpo TEXT,
         respostas_json TEXT,
       resposta_correta INTEGER
-        
+      tempo_resposta_total FLOAT DEFAULT 0,
+      tempo_resposta_questao FLOAT DEFAULT 0,
+      repeticoes INTEGER DEFAULT 0,
+      evolução FLOAT DEFAULT 0,
+      todas_certas INTEGER DEFAULT 0,
     )
     `)
 })
