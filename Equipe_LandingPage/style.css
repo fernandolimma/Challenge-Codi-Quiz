@@ -14,8 +14,9 @@ body{
 .container .navbar{
     height: 400px;
     display: flex; 
-    background-color: #5BAE54;
+    background-color: #9CCE98;
     overflow-y: hidden;
+    position: relative;
 }
 
 .container .navbar .left{
@@ -29,7 +30,20 @@ body{
     position: absolute;
     left: 35px;
 }
+.container .navbar .textologo{
+  color: #fff;
+  font-size: 100px;
+  font-weight: 800;
+  position: absolute; 
+  left: 23%; 
+  transform: translateX(-50%); 
+  top: 53%; 
+  transform: translateY(-50%); 
+}
 
+.container .navbar .textologo span {
+  color: #359B2C;
+}
 .container .navbar .right{
     display: flex;
     height: 100px;
@@ -287,6 +301,8 @@ body{
     align-items: center;
     height: auto;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .container .cadastro button {
@@ -300,6 +316,9 @@ body{
     transition: background-color 0.3s, color 0.3s;
     border: none;
     margin: 50px auto;
+    position: relative;
+    z-index: 1;
+    
 }
 
 .container .cadastro button a {
@@ -317,8 +336,26 @@ body{
     color: #008937;
 }
 
+.container .partebaixo .cor-fundo {
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translate(-50%, 70%);
+  width: 100%;
+  height: 94%; 
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(156,206,152,1) 10%, rgba(22,171,82,1) 50%, rgba(156,206,152,1) 90%, rgba(255,255,255,1) 100%);
+  z-index: -1;
+}
+
 .container .provas-sociais {
     text-align: center;
+    position: relative;
+}
+
+.container .provas-sociais h1 {
+  color: white;
+  font-size: 50px;
 }
 
 .container .provas-sociais .provasocial {
@@ -330,13 +367,14 @@ body{
 
 .container .provas-sociais .provasocial .todosalunos {
     text-align: center;
-    margin: 0 15px;
+    margin: 0 20px;
     border: 1px solid black;
-    padding: 15px;
+    padding: 20px;
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fff;
     
 }
 
@@ -355,7 +393,7 @@ body{
   /* final da página */
 
     .footer {
-    margin-top: 80px;
+    margin-top: 70px;
     border-top: 5px double #16ab52;
   }
 
