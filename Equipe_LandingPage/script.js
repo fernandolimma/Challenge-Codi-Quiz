@@ -1,8 +1,8 @@
+// configuração do botão Login
 const formOpenBtn = document.querySelector("#form-open"),
   home = document.querySelector(".home"),
   formContainer = document.querySelector(".form_container"),
   formCloseBtn = document.querySelector(".form_close"),
-  loginBtn = document.querySelector("#login"),
   pwShowHide = document.querySelectorAll(".pw_hide");
 
 formOpenBtn.addEventListener("click", () => home.classList.add("show"));
@@ -20,7 +20,41 @@ pwShowHide.forEach((icon) => {
     }
   });
 });
-loginBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  formContainer.classList.remove("active");
+
+// animação das caixas de texto
+
+function debounce(func, wait) {
+  let timeout;
+  return function () {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      func.apply(context, args);
+    }, wait);
+  };
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const target = document.querySelectorAll('[data-anime]');
+  const animationClass = 'animate';
+
+  function animeScroll() {
+    const windowTop = window.scrollY + (window.innerHeight);
+    target.forEach(function (element) {
+      if (windowTop > element.offsetTop) {
+        element.classList.add(animationClass);
+      } else {
+        element.classList.remove(animationClass);
+      }
+    });
+  }
+
+  animeScroll();
+
+  if (target.length) {
+    window.addEventListener('scroll', debounce(function () {
+      animeScroll();
+    }, 200));
+  }
 });
