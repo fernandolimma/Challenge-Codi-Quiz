@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  }
+  .container {
+    background-color: #d4f5d2;
+  }
+  
+  .container .navbar{
+    height: 100px;
+    display: flex; 
+    background-color: #9CCE98;
+    overflow-y: hidden;
+    position: relative;
+  }
+
+  .container .navbar .textologo{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 800;
+    position: absolute; 
+    left: 2%; 
+    transform: translateX(25%); 
+    top: 53%; 
+    transform: translateY(-50%); 
+    }
+    
+    .container .navbar .textologo span {
+    color: #359B2C;
+    }
+
+    .container .navbar img {
+    height: 100px;
+    position: absolute;
+    right: -20px;
+    }
+
+    .container .separador {
+        border-top: 5px double #16ab52;
+        margin-top: 0px;
+      }
+
+      /*Formulário */
+  
+form {
+  margin-left: 15%;
+  padding: 25px;
+  background: #fff;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 7px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+form h2 {
+  font-size: 27px;
+  text-align: center;
+  margin: 0px 0 30px;
+}
+form p{
+  margin: 15px 0;
+}
+form .form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+form label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+form input,
+form select {
+  height: 45px;
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #bfbfbf;
+}
+.password-input-container {
+  width: 100%;
+  outline: none;
+  background: #fff;
+  border-radius: 3px;
+  position: relative; 
+  display: inline-block; 
+}
+#pass-toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 5px; 
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+#password {
+  padding-right: 25px; 
+  width: 100%; 
+}
+.label-radio{ 
+  font-size: 15px;
+  margin: 10px 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+ #raça{
+  margin: 10px 0;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+ #genero{ 
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+ }
+ #def{
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+ }
+
+form input:focus,
+form select:focus {
+  border-color: #008937;
+}
+form small {
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  color: #f91919;
+}
+form .password i {
+  position: absolute;
+  right: 0px;
+  height: 45px;
+  top: 28px;
+  font-size: 13px;
+  line-height: 45px;
+  width: 45px;
+  cursor: pointer;
+  color: #939393;
+  text-align: center;
+}
+  #outra_deficiencia {
+  display: none;
+}
+  #outrogen_text {
+  display: none;
+}
+  #outrorac_text{
+  display: none;
+}
