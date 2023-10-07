@@ -220,6 +220,9 @@ ul {
 .politica-texto {
   margin: 10px 0;
 }
+.contato {
+  margin: 10px 0;
+}
 #button {
   cursor: pointer;
   font-size: 20px;
