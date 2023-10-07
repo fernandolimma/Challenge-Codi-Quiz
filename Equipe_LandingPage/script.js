@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 // configuração do botão Login
 const formOpenBtn = document.querySelector("#form-open"),
   home = document.querySelector(".home"),
@@ -35,7 +36,6 @@ function debounce(func, wait) {
   };
 }
 
-document.addEventListener('DOMContentLoaded', function () {
   const target = document.querySelectorAll('[data-anime]');
   const animationClass = 'animate';
 
@@ -56,5 +56,45 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', debounce(function () {
       animeScroll();
     }, 200));
-  }
+  };
+
+
+// Função para exibir o pop-up
+function showPopup(popupId) {
+  const popup = document.getElementById(popupId);
+  popup.style.display = "block";
+}
+
+// Função para ocultar o pop-up
+function closePopup(popupId) {
+  const popup = document.getElementById(popupId);
+  popup.style.display = "none";
+}
+
+// Event listeners para os links
+document.getElementById("politica-link").addEventListener("click", function() {
+  showPopup("politica-popup");
+});
+
+document.getElementById("termos-link").addEventListener("click", function() {
+  showPopup("termos-popup");
+});
+
+document.getElementById("contato-link").addEventListener("click", function() {
+  showPopup("contato-popup");
+});
+
+// Event listeners para os botões de fechar
+document.getElementById("close-politica-popup").addEventListener("click", function() {
+  closePopup("politica-popup");
+});
+
+document.getElementById("close-termos-popup").addEventListener("click", function() {
+  closePopup("termos-popup");
+});
+
+document.getElementById("close-contato-popup").addEventListener("click", function() {
+  closePopup("contato-popup");
+});
+
 });

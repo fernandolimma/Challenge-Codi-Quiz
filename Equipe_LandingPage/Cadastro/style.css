@@ -60,6 +60,7 @@ form {
   width: 100%;
   border-radius: 7px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
 }
 form h2 {
   font-size: 27px;
@@ -161,4 +162,121 @@ form .password i {
 }
   #outrorac_text{
   display: none;
+}
+#termos{
+  margin: 20px 5px 20px 0;
+  width: 15px;
+  height: 15px;
+  float: left;
+}
+label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 1.3em;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 10%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  overflow: auto;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+#close-termos-popup{
+  font-size: 50px;
+  cursor: pointer;
+  margin-left: 97%;
+}
+#close-contato-popup{
+  font-size: 50px;
+  right: 21%;
+}
+#close-politica-popup{
+  font-size: 50px;
+  right: 21%;
+}
+ul {
+  margin: 10px 0;
+}
+.politica-texto {
+  margin: 10px 0;
+}
+#button {
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 15px;
+  border-color: #008937;
+}
+#button:hover {
+  background-color: #16ab52;
+  color: #fff;
+
+}
+
+.footer {
+  margin-top: 0;
+  border-top: 5px double #16ab52;
+  overflow: hidden;
+}
+
+  .final-left .sobre a{
+  text-decoration: none;
+  text-align: left;
+  color: black;
+  cursor: pointer;
+  font-size: 25px;
+  margin-left: 50px;
+  margin-top: 25px;
+  display: block;
+}
+
+.final-left .icons {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 35px;
+  margin-right: 10px;
+  gap: 30px;
+}
+
+.final-right{
+  display: block;
+  text-align: right;
+  margin-right: 50px;
+  font-size: 20px;
+  word-spacing: 25px;
+  margin-top: -25px;
+  position: relative;
+}
+
+.final-right a{
+  text-decoration: none;
+}
+
+.final-right img{
+  height: 100px;
+  position: absolute;
+  display: block;
+  right: 0;
+  margin-right: -75px;
+  bottom: 100px;
 }

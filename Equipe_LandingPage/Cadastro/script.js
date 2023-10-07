@@ -42,7 +42,47 @@ passToggleBtn.addEventListener('click', () => {
     passwordInput.type = passwordInput.type === "password" ? "text" : "password";
 });
 
-// Handling form submission event
-form.addEventListener("submit", handleFormData);
-
 });
+// pop-up
+document.addEventListener("DOMContentLoaded", function () {
+  var termosPopup = document.getElementById("termos-popup");
+  var politicaPopup = document.getElementById("politica-popup");
+  var contatoPopup = document.getElementById("contato-popup");
+  var closeTermosPopup = document.getElementById("close-termos-popup");
+  var closePoliticaPopup = document.getElementById("close-politica-popup");
+  var closeContatoPopup = document.getElementById("close-contato-popup");
+
+  var openTermosLinks = document.querySelectorAll("#termos-foot, #termos-link");
+  var openPoliticaLink = document.getElementById("politica-foot");
+  var openContatoLink = document.getElementById("contato-foot");
+
+  openTermosLinks.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+          e.preventDefault();
+          termosPopup.style.display = "block";
+      });
+  });
+
+  openPoliticaLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      politicaPopup.style.display = "block";
+  });
+
+  openContatoLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      contatoPopup.style.display = "block";
+  });
+
+  closeTermosPopup.addEventListener("click", function () {
+      termosPopup.style.display = "none";
+  });
+
+  closePoliticaPopup.addEventListener("click", function () {
+      politicaPopup.style.display = "none";
+  });
+
+  closeContatoPopup.addEventListener("click", function () {
+      contatoPopup.style.display = "none";
+  });
+});
+  

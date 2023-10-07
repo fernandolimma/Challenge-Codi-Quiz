@@ -174,11 +174,128 @@
                     <option value="dc">Doutorado completo</option>
                 </div>
             <div>
-                <input type="submit" value="Enviar">
+                <input type="checkbox" id="termos" name="termos" />
+                <label for="termos">Aceito os <a href="" id="termos-link">Termos de Condição e de Uso</a></label>
+            </div>
+            <div id="termos-popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-popup" id="close-termos-popup">&times;</span>
+                  <!-- Seu texto dos termos aqui -->
+                  <p>
+                <h2 class="termo-texto">Termos de Condições e Uso do Projeto Design & Expertise</h2>
+                    <p class="termo-title"><b> 1. Introdução</p></b>
+                <p class="termo-texto">Bem-vindo ao site do Projeto Design & Expertise, desenvolvido pelo Instituto de Artes e Design (IAD) da UFJF. 
+                    Ao acessar este site, você concorda em cumprir os seguintes termos e condições. Se você não concorda com esses termos, 
+                    por favor, não use o site.</p>
+                    <p class="termo-title"><b> 2. Uso do Site</p></b>
+                <p class="termo-texto">O site do Projeto Design & Expertise destina-se a fornecer informações sobre os cursos, 
+                    materiais educacionais e recursos disponíveis no âmbito do projeto.</p>
+                <p class="termo-texto"></p>Os materiais educacionais disponíveis neste site são gratuitos para uso pessoal e educacional. 
+                    Qualquer uso comercial ou redistribuição dos materiais requer permissão prévia por escrito.</p>
+                    <p class="termo-title"><b> 3. Propriedade Intelectual</p></b>
+                <p class="termo-texto">Todo o conteúdo, incluindo textos, imagens, gráficos, logotipos e outros materiais exibidos no site, 
+                    são protegidos por direitos autorais e outros direitos de propriedade intelectual pertencentes ao Projeto Design & Expertise ou a 
+                    terceiros licenciados.</p>
+                <p class="termo-texto">Você concorda em respeitar todos os direitos autorais e de propriedade intelectual ao acessar e usar o site.</p>
+                    <p class="termo-title"><b> 4. Matrícula e Certificados</p></b>
+                <p class="termo-texto">Para participar dos cursos oferecidos pelo projeto e obter certificados de conclusão, 
+                    você deve cumprir os requisitos específicos mencionados nas páginas do curso.</p>
+                    <p class="termo-title"><b> 5. Privacidade e Dados Pessoais</p></b>
+                <p class="termo-texto">O Projeto Design & Expertise respeita a sua privacidade. Para obter informações sobre como seus dados 
+                    pessoais são coletados, usados e protegidos, consulte nossa Política de Privacidade.</p>
+                    <p class="termo-title"><b> 6. Responsabilidade</p></b>
+                <p class="termo-texto">O Projeto Design & Expertise faz esforços para fornecer informações precisas e atualizadas no site, 
+                    mas não se responsabiliza por erros ou omissões no conteúdo.</p>
+                <p class="termo-texto">O uso do site é de sua inteira responsabilidade, e o Projeto Design & Expertise não se 
+                    responsabiliza por danos diretos, indiretos ou consequenciais decorrentes do uso do site ou de seus materiais.</p>
+                    <p class="termo-title"><b> 7. Links para Sites de Terceiros</p></b>
+                <p class="termo-texto">Este site pode conter links para sites de terceiros. O Projeto Design & Expertise não controla o conteúdo 
+                    desses sites e não se responsabiliza por seu conteúdo ou práticas de privacidade.</p>
+                    <p class="termo-title"><b> 8. Alterações nos Termos</b></p>
+                <p class="termo-texto">O Projeto Design & Expertise se reserva o direito de alterar estes Termos de Condições e Uso 
+                    a qualquer momento. As alterações serão publicadas neste site, e o uso continuado do site após tais alterações constituirá 
+                    sua aceitação dessas mudanças.</p>
+                    <p class="termo-title"><b> 9. Encerramento de Acesso</p></b>
+                <p class="termo-texto">O Projeto Design & Expertise se reserva o direito de encerrar ou restringir o acesso ao site a 
+                        qualquer momento, sem aviso prévio.</p>
+                        <p class="termo-title"><b> 10. Contato</p></b>
+                <p class="termo-texto">Se você tiver alguma dúvida ou preocupação sobre estes Termos de Condições e Uso, 
+                        entre em contato conosco pelo seguinte endereço de e-mail: expertemdesign@gmail.com.</p>
+                <p class="termo-texto">Estes Termos de Condições e Uso foram atualizados pela última vez em 02/10/2023.</p>
+                </div>
+              </div>
+            <div>
+                <input type="submit" id="button" value="Enviar">
             </div>
             </form>
         </div>
-
+    </div>
+    <div class="footer">
+        <div class="final-left">
+            <div class="icons">
+                <a href="#" target="_blank"><img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook.png" alt="facebook"></a>
+                <a href="#" target="_blank"><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"></a>
+                <a href="#" target="_blank"><img width="48" height="48" src="https://img.icons8.com/twitterx" alt="twitterx"></a>
+            </div>
+        </div>
+        <div class="final-right">
+            <a href="#" id="politica-foot">Politica | </a>
+            <a href="#" id="termos-foot">Termos | </a>
+            <a href="#" id="contato-foot">Contato</a>
+        </div>
+        <div id="politica-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="close-politica-popup">&times;</span>
+                <h2>Política</h2>
+                <p class="politica-texto">Política de Privacidade do Projeto Design & Expertise</p>
+                    <p class="politica-title"><b> 1. Coleta de Informações Pessoais</b>  
+                <p class="politica-texto">O Projeto Design & Expertise pode coletar informações pessoais identificáveis quando você as fornece voluntariamente, 
+                    como ao preencher formulários de matrícula ou entrar em contato conosco por meio do site. As informações pessoais podem incluir seu nome, 
+                    endereço de e-mail, número de telefone e outras informações relevantes.</p>
+                    <p class="politica-title"><b> 2. Uso de Informações Pessoais</b>
+                <p class="politica-texto">As informações pessoais coletadas podem ser usadas para os seguintes fins:</p>
+                        <ul id="lista">
+                        <li>&nbsp Para processar matrículas em cursos e fornecer certificados de conclusão.</li>
+                        <li>&nbsp Para enviar informações relevantes sobre o projeto, como atualizações de cursos ou eventos.</li>
+                        <li>&nbsp Para melhorar a qualidade dos cursos e materiais educacionais oferecidos.</li>
+                        <li>&nbsp Para responder a consultas e solicitações.</li>
+                        </ul>
+                    <p class="politica-title"><b> 3. Proteção de Dados</p></b>
+                <p class="politica-texto">O Projeto Design & Expertise se compromete a proteger suas informações pessoais e adotar medidas de 
+                    segurança razoáveis para prevenir o acesso não autorizado, uso indevido ou divulgação de suas informações pessoais.</p>
+                    <p class="politica-title"><b> 4. Compartilhamento de Informações Pessoais</b>
+                <p class="politica-texto"> As informações pessoais dos usuários não serão vendidas, alugadas ou compartilhadas com terceiros, 
+                    exceto conforme necessário para cumprir os objetivos mencionados nesta Política de Privacidade ou quando exigido por lei.</p>
+                    <p class="politica-title"><b> 5. Cookies e Tecnologias de Rastreamento</b>
+                <p class="politica-texto">O site do Projeto Design & Expertise pode usar cookies e tecnologias de rastreamento para melhorar a 
+                    experiência do usuário e coletar informações sobre o uso do site. Esses dados podem incluir informações como endereço IP, 
+                    tipo de navegador, páginas visitadas e horários de visita. Essas informações são usadas para análises estatísticas e melhorias no site.</p>
+                    <p class="politica-title"><b>6. Links para Sites de Terceiros</b></p>
+                <p class="politica-texto">Este site pode conter links para sites de terceiros. O Projeto Design & Expertise não se responsabiliza pelo 
+                    conteúdo ou práticas de privacidade desses sites e recomenda que os usuários revisem as políticas de privacidade de terceiros antes 
+                    de fornecer informações pessoais.</p>
+                    <p class="politica-title"><b>7. Consentimento</b></p>
+                <p class="politica-texto"> Ao utilizar o site do Projeto Design & Expertise, você consente com a coleta e uso de suas informações 
+                    pessoais de acordo com esta Política de Privacidade.</p>
+                    <p class="politica-title"><b>8. Alterações na Política de Privacidade</b></p>
+                <p class="politica-texto">O Projeto Design & Expertise se reserva o direito de atualizar esta Política de Privacidade conforme necessário. 
+                    Quaisquer alterações serão publicadas nesta página, e a data da última atualização será indicada abaixo.</p>
+                    <p class="politica-title"><b>9. Contato</b></p>
+                <p class="politica-texto">Se você tiver dúvidas ou preocupações sobre esta Política de Privacidade, entre em contato conosco pelo 
+                    seguinte endereço de e-mail: expertemdesign@gmail.com.</p>
+                <p class="politica-texto">Esta Política de Privacidade foi atualizada pela última vez em 02/10/2023.</p>
+            </div>
+        </div>
+        
+        <!-- Pop-up para Contato -->
+        <div id="contato-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="close-contato-popup">&times;</span>
+                <h2>Contato</h2>
+                <p>Este é o texto de Contato.</p>
+            </div>
+        </div>
+        
     </div>
     
 </body>
