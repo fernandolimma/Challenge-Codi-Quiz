@@ -229,6 +229,7 @@ ul {
   transition: background-color 0.3s, color 0.3s;
   border-radius: 15px;
   border-color: #008937;
+  overflow-y: hidden;
 }
 #button:hover {
   background-color: #16ab52;
