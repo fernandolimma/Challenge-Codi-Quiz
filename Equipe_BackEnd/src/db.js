@@ -36,3 +36,4 @@ db_perguntas.serialize(()=>{
     )
     `)
 })
+
