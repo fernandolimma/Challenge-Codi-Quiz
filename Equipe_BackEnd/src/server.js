@@ -16,10 +16,14 @@ app.use(cors());
 
 app.use(express.json());
 
-app.use(express.static(landingPageDirectory));
+app.use(express.static("public"));
 
-app.get('/Equipe_LandingPage/index.html', (req, res) => {
-    res.sendFile(path.join(landingPageDirectory, 'index.html'));
+app.set("view engine", "ejs")
+app.set("views", "./src/views")
+
+
+app.get('/', (req, res) => {
+    res.render("index");
 });
 
 app.post('/login', (req, res) => {
