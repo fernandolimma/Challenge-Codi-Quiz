@@ -98,3 +98,30 @@ document.getElementById("close-contato-popup").addEventListener("click", functio
 });
 
 });
+
+// adição de ações de interação entre frontend e backend
+
+const loginButton = document.getElementById('loginButton');
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+
+loginButton.addEventListener('click', () => {
+  const username = usernameInput.value;
+  const password = passwordInput.value;
+
+  // Fazer uma chamada de API para o backend com os dados
+  fetch('/login', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, password })
+  })
+  .then(response => response.json())
+  .then(data => {
+      // Lidar com a resposta do servidor (por exemplo, exibir mensagens de sucesso/erro)
+  })
+  .catch(error => {
+      console.error('Erro na chamada da API: ', error);
+  });
+});
