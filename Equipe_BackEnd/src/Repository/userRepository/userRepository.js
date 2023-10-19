@@ -1,22 +1,14 @@
 // essa pasta salva as informações relacionadas a usuário no banco de dados
 
-class UserRepository {
-    constructor(database) {
-      this.db = database;
-    }
-  
-    createUser(userData) { // método POST
-      // Lógica para criar um usuário no banco de dados
-    }
-  
-    getUserById(userId) { //método GET
-      // Lógica para buscar um usuário pelo ID
-    }
+const users = [
+  { email: 'email', password: 'senha' },
+  // Outros usuários...
+];
 
-    updateUser(userId) { // método PUT
+function findUserByEmail(email) {
+  return users.find(user => user.email === email);
+}
 
-    }
-    deleteUser (userId) { // método DELETE
- 
-    }
-  }
+module.exports = {
+  findUserByEmail,
+};

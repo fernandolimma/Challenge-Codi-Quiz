@@ -1,20 +1,21 @@
-const express = require('express');
-const router = express.Router();
+// Importe o módulo 'userService'. Verifique o caminho correto.
+const service = require('../userService');
+const caminho_cpanel = './'
+// Defina a função 'login' sem o par de parênteses desnecessários.
+function login(req, res) {
+    const { email, password } = req.body;
 
-router.post('/login', async (req, res) => {
-  const { username, password } = req.body;
+    const result = service.loginUser(email, password);
 
-  try {
-    // Chame o serviço de autenticação para validar as credenciais
-    const authService = new authService(userRepository);
-    await authService.authenticateUser(username, password);
+    if (result.success) {
+        // Redirecione para a página de painel do usuário
+        res.redirect('');
+    } else {
+        // Redirecione de volta para a página de login com uma mensagem de erro
+        res.redirect('/login?erro=credenciais_invalidas');
+    }
+}
 
-    // Se a autenticação for bem-sucedida, envie uma resposta apropriada
-    res.status(200).json({ message: 'Autenticação bem-sucedida' });
-  } catch (error) {
-    // Em caso de erro, envie uma resposta de erro
-    res.status(401).json({ error: error.message });
-  }
-});
-
-module.exports = router;
+module.exports = {
+    login,
+};
