@@ -1,0 +1,43 @@
+#@ create-pergunta
+POST http://localhost:8080/quiz
+Content-Type: application/json
+
+{
+  "pergunta": "Qual é o maior planeta do sistema solar?",
+  "resposta1": "Terra",
+  "resposta2": "Júpiter",
+  "resposta3": "Marte",
+  "resposta4": "Vênus",
+  "respostaCorreta": 1
+}
+
+###
+
+#@ list-pergunta
+GET http://localhost:8080/quiz
+
+###
+
+# @ update-pergunta
+PUT http://localhost:8080/quiz
+Content-Type: application/json
+
+
+
+###
+
+# @ delete-pergunta
+DELETE http://localhost:8080/quiz/97cb6b5b-31d5-4d26-a96e-d2ce77ccc081
+
+
+###
+
+#@ create-usuário
+POST http://localhost:8080/cadastro
+Content-Type: application/json
+
+{
+  "name": "fulano",
+  "email": "fulano@email.com",
+  "password": "123",
+}

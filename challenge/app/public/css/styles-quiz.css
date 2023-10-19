@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titulo {
+    background-color: #9cce98;
+    padding-top: 22px;
+    text-align: center;
+}
+
+.titulo h3 {
+    padding-top: 6px;
+    color: #fff;
+    margin: 0;
+    /* text-transform: uppercase; */
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: -5px;
+}
+
+.titulo span {
+    color: #359B2C;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(89, 173, 81);
+    width: 80%; /* Defina a largura desejada */
+    max-width: 600px; /* Defina uma largura máxima, se desejar */
+    padding: 20px; /* Adicione preenchimento conforme necessário */
+    border-radius: 10px; /* Adicione bordas arredondadas, se desejar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adicione sombra, se desejar */
+}
+.container h1 {
+    color: #fff;
+}
+.quiz-class {
+    color: #fff;
+}
+
+.quiz-class {
+    font-size: 20px;
+}
+
+.quiz-class p {
+    font-size: 25px;
+}
+
+.modal {
+    text-align: center;
+    background-color: rgb(53, 155, 44);    
+    position: fixed;
+    top: 50%; /* Centraliza verticalmente na metade da tela */
+    left: 50%; /* Centraliza horizontalmente na metade da tela */
+    transform: translate(-50%, -50%); /* Centraliza o modal */
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adicione sombra para destacar o modal */
+    width: 600px; /* Largura desejada */
+    height: 360px;
+}
+
+.modal p {
+    padding-top: 25px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.modal button {
+    color: #fff;
+    background-color: rgb(156, 206, 152);
+    border-radius: 10px;
+    font-size: 22px;
+    margin-top: 40px;
+    border: none;
+    font-weight:400;
+    width: 240px; /* Largura desejada */
+    height: 90px;
+}
+
+#answer-list {
+    cursor: pointer;
+}
