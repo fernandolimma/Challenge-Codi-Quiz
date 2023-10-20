@@ -6,13 +6,8 @@ export class LoginControllers {
     try {
       const { email, password } = req.body
 
-      console.log(email)
-      console.log(password)
-
-      const emailFormat = email.replace(/ /g, '')
-      const passwordFormat = password.replace(/ /g, '')
-      console.log(emailFormat)
-      console.log(passwordFormat)
+      //console.log(email)
+      //console.log(password)
 
       if (!email || !password) {
         return res.status(400).json({ Mensagem: 'Credenciais incompletas' })
@@ -30,14 +25,17 @@ export class LoginControllers {
 
       const passwordMatch = await bcrypt.compare(password, user.password)
 
+      // Senha correta, autenticação bem-sucedida
       if (passwordMatch) {
-        // Senha correta, autenticação bem-sucedida
-        return res.render('paineldecontrole')
+        
+        return res.render('cPanel')
       } else {
+
         return res.status(401).json({ Mensagem: 'Credenciais INVÁLIDAS' })
       }
     } catch (error) {
       console.error(error)
+
       return res.status(500).json({ Mensagem: 'Ocorreu um erro no servidor' })
     }
   }

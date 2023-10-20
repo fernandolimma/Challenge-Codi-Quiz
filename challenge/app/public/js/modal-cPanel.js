@@ -68,6 +68,8 @@ document.getElementById('openModal_5').addEventListener('click', () => {
   openModal5('Modal Personalizado')
 })
 
+
+// Aqui lista e exclue as perguntas
 const listPerguntas = document.querySelector('.list-perguntas')
 async function getPerguntas() {
   const response = await fetch('http://localhost:8080/quiz')
@@ -83,6 +85,7 @@ async function getPerguntas() {
       <button class="remove-pergunta" data-id="${item.id}">
         Excluir
       </button>
+      
       ${item.pergunta}
     `
     listPerguntas.appendChild(listItem)
@@ -116,4 +119,75 @@ async function excluirPergunta(id) {
   return true
 }
 
+
+
+
+// Aqui lista e exclue usuários
+const listUsuarios = document.querySelector('.list-usuarios')
+async function getUsuarios() {
+  const response = await fetch('http://localhost:8080/usuarios')
+  if (!response.ok) {
+    throw new Error('Não foi possível carregar os usuários.')
+  }
+  const data = await response.json()
+  console.log(data)
+
+  data.forEach((item) => {
+    const listItem = document.createElement('li')
+    listItem.innerHTML = `
+      <button class="remove-usuario" data-id="${item.id}">
+        Excluir
+      </button>
+
+      ${item.name} ->
+      ${item.email}
+
+    `
+    listUsuarios.appendChild(listItem)
+  })
+
+  // Adicione um evento de clique para os botões de exclusão
+  const removeButtons = document.querySelectorAll('.remove-usuario')
+  removeButtons.forEach((button) => {
+    button.addEventListener('click', async (event) => {
+      const id = event.target.getAttribute('data-id')
+      if (id) {
+        const success = await excluirUsuario(id)
+        if (success) {
+          // Atualize a lista após a exclusão
+          listUsuarios.innerHTML = ''
+          getUsuarios()
+        }
+      }
+    })
+  })
+}
+
+async function excluirUsuario(id) {
+  const response = await fetch(`http://localhost:8080/usuarios/${id}`, {
+    method: 'DELETE',
+  })
+  if (!response.ok) {
+    console.error(`Não foi possível excluir o usuario com o ID ${id}.`)
+    return false
+  }
+  return true
+}
+
+
+document.getElementById('logoutButton').addEventListener('click', () => {
+  // Realize a ação de logout aqui, como limpar os dados de autenticação e redirecionar para a página de login, se aplicável.
+  // Você pode usar um sistema de autenticação ou uma API de autenticação para implementar o logout.
+
+  // Exemplo de logout simples: Limpar o token de autenticação, se aplicável.
+  localStorage.removeItem('authToken'); // Suponhamos que você está usando localStorage para armazenar o token de autenticação.
+
+  // Redirecionar para a página de login, ou qualquer outra ação que você deseja após o logout.
+  window.location.href = '/';
+});
+
+
+
 getPerguntas()
+
+getUsuarios()

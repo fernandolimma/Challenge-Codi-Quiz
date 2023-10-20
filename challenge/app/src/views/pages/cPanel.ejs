@@ -22,7 +22,7 @@
         <h3><span>sustentabilidade</span></h3>
       </div>
       <div class="right">
-        <a href="#" class="sair_btn">Sair</a>
+        <a href="#" id="logoutButton" class="sair_btn">Logout</a>
       </div>
     </header>
     <!-- header final -->
@@ -33,6 +33,7 @@
         <img src="/assets/ana.jpg" class="image" alt="" />
         <h2>Ana</h2>
       </center>
+
       <a href="#" id="openModal" onclick="openModal('Perfil')"
         ><ion-icon name="person-circle-outline"></ion-icon
         ><span>Perfil</span></a
@@ -158,14 +159,18 @@
       <div id="modal_4" class="modal">
         <div class="modal-content">
           <h2 id="modalTitle_4">Título do Modal</h2>
+
           <div>
-            <h3>#Configurações</h3>
+            <h3>#Listar Perguntas</h3>            
           </div>
+
           <ul class="list-perguntas">
-          </ul>
-          <br /><button id="closeModal_4" onclick="closeModal4()">
+          </ul><br>
+          
+          <button id="closeModal_4" onclick="closeModal4()">
             Fechar
-          </button>
+          </button>          
+
         </div>
       </div>
 
@@ -179,6 +184,14 @@
           <div>
             <p>Vídeo aula com tutorial de uso do App</p>
           </div>
+
+          <div>
+            <h3>#Listar Usuarios</h3>            
+          </div>
+
+          <ul class="list-usuarios">
+          </ul><br>
+
           <br /><button id="closeModal_5" onclick="closeModal5()">
             Fechar
           </button>
