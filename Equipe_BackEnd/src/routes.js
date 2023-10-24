@@ -16,5 +16,9 @@ router.get('/usuario', (req, res) => {
     return res.render('cpanel.ejs')
 })
 
+router.get('/quiz', (req, res) => {
+    return res.render('quiz.ejs')
+})
+
 export { router }
 
