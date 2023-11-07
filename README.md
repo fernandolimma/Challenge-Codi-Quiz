@@ -61,6 +61,16 @@
   $ npm install
   ```
 
+  > Prisma Generate
+  ```
+  $ npx prisma generate
+  ```
+
+  > Instalar o bcrypt
+  ```
+  $ npm install bcrypt (Se nessesário)
+  ```
+
   > Iniciar projeto
   ```
   $ npm run dev
