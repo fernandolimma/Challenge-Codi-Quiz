@@ -1,1 +1,0 @@
-essa pasta salva as informações relacionadas a usuário no banco de dados

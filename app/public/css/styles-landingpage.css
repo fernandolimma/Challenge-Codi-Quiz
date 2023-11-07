@@ -1,0 +1,589 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.container .navbar{
+  height: 400px;
+  display: flex; 
+  background-color: #9CCE98;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.container .navbar .left{
+  height: 100%;
+  display: flex;
+  float: left;
+}
+
+.container .navbar .left img{
+  height: 100px;
+  position: absolute;
+  left: 35px;
+}
+
+.container .navbar .textologo{
+color: #fff;
+font-size: 100px;
+font-weight: 800;
+position: absolute; 
+left: 23%; 
+transform: translateX(-50%); 
+top: 53%; 
+transform: translateY(-50%); 
+}
+
+.container .navbar .textologo span {
+color: #359B2C;
+}
+.container .navbar .right{
+  display: flex;
+  height: 100px;
+  float: right;
+  position: absolute;
+  right: 50px;
+}
+#banner img{
+  height: 3rem;
+}
+
+#banner {
+  width: 100%;
+  height: 3rem;
+
+  background-color: #9ee497;
+
+  display: flex;
+  align-items: center;
+  
+}
+
+#banner a {
+  display: block;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  margin-left: 33%;
+}
+
+#banner a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 0;
+  height: 4px;
+  margin-top: 2.5rem;
+}
+
+#banner a::after:hover {
+  width: 100%;
+  transition: .2s;
+}
+
+.container .navbar .right .nav button{
+  margin: 15% auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 400;
+  padding: 7px 25px;
+  background: #359B2C;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  border-color: #008937;
+  transition: background-color 0.3s, color 0.3s;
+  overflow: hidden;
+  color: #fff;
+  
+}
+
+.container .navbar .right button:hover{
+background-color: white;
+color: #359B2C;
+}
+
+/*Configuração do botão */
+
+
+.button:active {
+  transform: scale(0.98);
+  }
+  
+  /* Home */
+  .home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  
+  background-size: cover;
+  background-position: center;
+  }
+  .home::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+  }
+  .home.show::before {
+  opacity: 1;
+  pointer-events: auto;
+  }
+  /* From */
+  .form_container {
+  position: fixed;
+  max-width: 320px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 101;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-out;
+  }
+  .home.show .form_container {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  }
+  .signup_form {
+  display: none;
+  }
+  .form_container.active .login_form {
+  display: none;
+  }
+  .form_close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #0b0217;
+  font-size: 22px;
+  opacity: 0.7;
+  cursor: pointer;
+  }
+  .form_container h2 {
+  font-size: 22px;
+  color: #0b0217;
+  text-align: center;
+  }
+  .input_box {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+  }
+  .input_box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 30px;
+  color: #333;
+  transition: all 0.2s ease;
+  border-bottom: 1.5px solid #aaaaaa;
+  }
+  .input_box input:focus {
+  border-color: #008937;
+  }
+  .input_box i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #707070;
+  }
+  .input_box i.email,
+  .input_box i.password {
+  left: 0;
+  }
+  .input_box input:focus ~ i.email,
+  .input_box input:focus ~ i.password {
+  color: #008937;
+  }
+  .input_box i.pw_hide {
+  right: 0;
+  font-size: 18px;
+  cursor: pointer;
+  }
+  .option_field {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .option_field .remember {
+  font-size: 15px;
+  }
+  .form_container a {
+  color: black;
+  font-size: 15px;
+  }
+  .form_container a:hover {
+  text-decoration: underline;
+  }
+  .checkbox {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+  }
+  .checkbox input {
+  accent-color: #359B2C;
+  }
+  .checkbox label {
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: #0b0217;
+  }
+  .form_container .button {
+  background: #359B2C;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: #fff;
+  }
+  .login_signup {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+  }
+  .novaconta {
+  font-size: 15px;
+  margin-top: 15px;
+  }
+
+/*Parte de textos e o vídeo */
+
+.container .navbar .content {
+  overflow-y: hidden;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15%;
+}
+
+.container .content img {
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  max-width: 100%;
+}
+
+.container .separador {
+  border-top: 5px double #16ab52;
+  margin-top: 0px;
+}
+
+.container .conteudo{
+  display: flex;
+}
+
+.container .projeto{
+  text-align: left;
+  font-size: 20px;
+  margin: 50px 50px 0 25px;
+  border: 5px groove #16ab52;
+  padding: 50px;
+  flex: 0.5;
+  background-color: #fff;
+}
+
+.container .projeto #titulo{
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 50px;
+}
+.container .projeto p{
+margin-top: 10px;
+}
+
+.container .video{ 
+  margin-right: 25px;
+  margin-top: 50px;
+  border: 5px groove #16ab52;
+  padding: 25px 25px 0 25px;
+  flex: 0.5;
+  background-color: #fff;
+}
+
+.container .video #texto-video {
+  font-size: 25px;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-right: auto;
+}
+
+ /* Lista animada */
+.container .maisinfo #introducao{
+  font-size: 25px;
+  margin: 25px 50px;
+  border: 5px groove #16ab52;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  background: rgb(122,189,117);
+background: linear-gradient(90deg, rgba(122,189,117,1) 10%, rgba(22,171,82,1) 50%, rgba(122,189,117,1) 90%);
+}
+
+.lista {
+  font-size: 25px;
+  margin: 0 25px 0 25px;
+  border: 5px groove #16ab52;
+}
+
+.lista li{
+  margin-top: 15px;
+  padding: 5px 0 20px 50px;
+}
+
+.maisinfo img {
+  margin-top: 50px;
+}
+
+[data-anime]{
+  opacity: 0;
+  transition: .6s;
+}
+
+[data-anime="bottom"]{
+  transform: translate3d(0, 100px, 0);
+}
+
+[data-anime="left1"]{
+  transform: translate3d(-50px, 0, 0);
+  transition: .6s;
+}
+
+[data-anime="left2"]{
+  transform: translate3d(-50px, 0, 0);
+  transition: .8s;
+}
+
+[data-anime="left3"]{
+  transform: translate3d(-50px, 0, 0);
+  transition: .6s;
+}
+
+[data-anime="left4"]{
+  transform: translate3d(-50px, 0, 0);
+  transition: 1s;
+}
+
+[data-anime="right"]{
+  transform: translate3d(50px, 0, 0);
+  transition: 1.2s;
+}
+
+[data-anime].animate{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+ /* Inferior com botão e avaliações */
+  /*Verificar cor de botão para chamar mais atenção
+    Verificar como centralizar o botão e alinhar a página, também importante tentar diminuir*/
+
+  .container .cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .cadastro button {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 20px 250px;
+    background: #008937;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid #01742f;
+    margin: 50px auto;
+    position: relative;
+    
+}
+
+.container .cadastro button a {
+    color: white;
+    text-decoration: none;
+}
+
+.container .cadastro button:hover {
+    background-color: #9CCE98;
+    color: #16ab52;
+    border: 2px solid #008937;
+}
+
+.container .cadastro button:hover a {
+    color: #008937;
+}
+
+.container .provas-sociais {
+    text-align: center;
+    position: relative;
+}
+
+.container .provas-sociais h1 {
+  color: black;
+  font-size: 50px;
+}
+
+.container .provas-sociais .provasocial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.container .provas-sociais .provasocial .todosalunos {
+    text-align: center;
+    margin: 0 20px;
+    border: 1px solid black;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    
+}
+
+.container .provas-sociais .todosalunos .nome {
+    margin-top: 15px;
+}
+
+.todosalunos img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    order: -1;
+  }
+
+  /* final da página */
+
+    .footer {
+    margin-top: 0;
+    border-top: 5px double #16ab52;
+    overflow: hidden;
+  }
+
+    .final-left .sobre a{
+    text-decoration: none;
+    text-align: left;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 25px;
+    display: block;
+  }
+
+  .final-left .icons {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 35px;
+    margin-right: 10px;
+    gap: 30px;
+  }
+
+  .final-right{
+    display: block;
+    text-align: right;
+    margin-right: 50px;
+    font-size: 20px;
+    word-spacing: 25px;
+    margin-top: -25px;
+    position: relative;
+  }
+
+  .final-right a{
+    text-decoration: none;
+  }
+
+  .final-right img{
+    height: 100px;
+    position: absolute;
+    display: block;
+    right: 0;
+    margin-right: -75px;
+    bottom: 100px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.popup button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.politica-texto {
+  margin: 10px 0;
+}
+
+.popup-content ul {
+  margin: 10px 0;
+}
+
+.termo-texto {
+  margin: 10px 0;
+}
+
+.contato {
+  margin: 10px 0;
+}
+
+

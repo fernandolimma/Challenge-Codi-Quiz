@@ -1,1 +1,0 @@
-essa pasta faz toda a parte de regra de negócio do quiz, relacionada às perguntas e ao usuário
