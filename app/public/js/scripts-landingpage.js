@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
+  
+  var overlay = document.getElementById("overlay");
+
+function showOverlay() {
+    overlay.style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+
+function hideOverlay() {
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto";
+}
   // configuração do botão Login
   const formOpenBtn = document.querySelector("#form-open"),
     home = document.querySelector(".home"),
@@ -6,8 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
     formCloseBtn = document.querySelector(".form_close"),
     pwShowHide = document.querySelectorAll(".pw_hide");
   
-  formOpenBtn.addEventListener("click", () => home.classList.add("show"));
-  formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
+    formOpenBtn.addEventListener("click", () => {
+      home.classList.add("show");
+      showOverlay();
+  });
+  formCloseBtn.addEventListener("click", () => {
+    home.classList.remove("show");
+    hideOverlay();
+});
   
   pwShowHide.forEach((icon) => {
     icon.addEventListener("click", () => {

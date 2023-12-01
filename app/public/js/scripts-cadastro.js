@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 // limita os caracteres do cpf
 $(document).ready(function(){
     $('#cpf').inputmask();
@@ -30,7 +31,7 @@ function ocultarCaixaTextoGen() {
 
 
     // Formulario Configurações
-    document.addEventListener('DOMContentLoaded', function () {
+
     // Selecionando form e input elements
 const form = document.querySelector("form");
 const passwordInput = document.getElementById("password");
@@ -42,9 +43,21 @@ passToggleBtn.addEventListener('click', () => {
     passwordInput.type = passwordInput.type === "password" ? "text" : "password";
 });
 
-});
+
 // pop-up
-document.addEventListener("DOMContentLoaded", function () {
+
+var overlay = document.getElementById("overlay");
+
+function showOverlay() {
+    overlay.style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+
+function hideOverlay() {
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
   var termosPopup = document.getElementById("termos-popup");
   var politicaPopup = document.getElementById("politica-popup");
   var contatoPopup = document.getElementById("contato-popup");
@@ -60,29 +73,35 @@ document.addEventListener("DOMContentLoaded", function () {
       link.addEventListener("click", function (e) {
           e.preventDefault();
           termosPopup.style.display = "block";
+          showOverlay();
       });
   });
 
   openPoliticaLink.addEventListener("click", function (e) {
       e.preventDefault();
       politicaPopup.style.display = "block";
+      showOverlay();
   });
 
   openContatoLink.addEventListener("click", function (e) {
       e.preventDefault();
       contatoPopup.style.display = "block";
+      showOverlay();
   });
 
   closeTermosPopup.addEventListener("click", function () {
-      termosPopup.style.display = "none";
+     termosPopup.style.display = "none";
+     hideOverlay();
   });
 
   closePoliticaPopup.addEventListener("click", function () {
       politicaPopup.style.display = "none";
+      hideOverlay();
   });
 
   closeContatoPopup.addEventListener("click", function () {
       contatoPopup.style.display = "none";
+      hideOverlay();
   });
+
 });
-  

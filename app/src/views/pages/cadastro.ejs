@@ -7,18 +7,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-    <script src="script.js"></script>
+    <script src="/js/scripts-cadastro.js"></script>
     <link rel="stylesheet" href="/css/cadastro.css" />
     <title>Cadastre-se | Design e Sustentabilidade</title>
 </head>
 <body>
+    <div id="overlay"></div>
     <div class="container">
         <nav class="navbar">
             <div class="textologo">
-                <h3>Design &</h3>
-                <h3><span>Sustentabilidade</span></h3>
+                <a href="http://localhost:8080/"><h3>Design &</h3>
+                <h3><span>Sustentabilidade</span></h3></a>
             </div>
-            <img src="Marca-1024x192.png" alt="Design e Expertise" width="400">
+            <img src="/assets/Marca-1024x192.png" alt="Design e Expertise" width="400">
         </nav>
         <div class="separador"></div>
         <div class="formulariotodo">
@@ -180,6 +181,7 @@
                 <input type="checkbox" id="termos" name="termos" required/>
                 <label for="termos">Aceito os <a href="" id="termos-link">Termos de Condição e de Uso</a></label>
             </div>
+            -->
             <div id="termos-popup" class="popup">
                 <div class="popup-content">
                     <span class="close-popup" id="close-termos-popup">&times;</span>
@@ -227,7 +229,7 @@
                 <p class="termo-texto">Estes Termos de Condições e Uso foram atualizados pela última vez em 02/10/2023.</p>
                 </div>
               </div>
-            -->
+            
             <div>
                 <input type="submit" id="button" value="Enviar">
             </div>
@@ -237,9 +239,9 @@
     <div class="footer">
         <div class="final-left">
             <div class="icons">
-                <a href="#" target="_blank"><img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook.png" alt="facebook"></a>
-                <a href="https://www.instagram.com/designeexpertiseufjf/" target="_blank"><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"></a>
-                <a href="#" target="_blank"><img width="48" height="48" src="https://img.icons8.com/twitterx" alt="twitterx"></a>
+                <a href="#"><img width="50" height="50" src="https://img.icons8.com/fluency/48/facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/designeexpertiseufjf/" target="_blank"><img width="50" height="50" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"></a>
+                <a href="#"><img width="50" height="50" src="https://img.icons8.com/twitterx" alt="twitterx"></a>
             </div>
         </div>
         <div class="final-right">
@@ -308,6 +310,6 @@
         </div>
         
     </div>
-    
+
 </body>
 </html>

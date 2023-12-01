@@ -31,23 +31,23 @@ body{
   left: 35px;
 }
 
-.container .navbar .textologo{
-color: #fff;
-font-size: 100px;
-font-weight: 800;
-position: absolute; 
-left: 23%; 
-transform: translateX(-50%); 
-top: 53%; 
-transform: translateY(-50%); 
+.container .navbar .textologo {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 800;
+  position: absolute;
+  left: 50%; /* Centralizando horizontalmente */
+  top: 60%; /* Centralizando verticalmente */
+  transform: translate(-50%, -50%); /* Ajuste para centralização horizontal e vertical */
 }
+
 
 .container .navbar .textologo span {
 color: #359B2C;
 }
 .container .navbar .right{
   display: flex;
-  height: 100px;
+  height: 200px;
   float: right;
   position: absolute;
   right: 50px;
@@ -97,9 +97,9 @@ color: #359B2C;
   margin: 15% auto;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 400;
-  padding: 7px 25px;
+  padding: 10px 25px;
   background: #359B2C;
   cursor: pointer;
   outline: none;
@@ -303,7 +303,7 @@ color: #359B2C;
 }
 
 .container .projeto{
-  text-align: left;
+  text-align: justify;
   font-size: 20px;
   margin: 50px 50px 0 25px;
   border: 5px groove #16ab52;
@@ -321,20 +321,33 @@ color: #359B2C;
 margin-top: 10px;
 }
 
-.container .video{ 
+.container .video {
   margin-right: 25px;
   margin-top: 50px;
   border: 5px groove #16ab52;
-  padding: 25px 25px 0 25px;
+  padding: 20px 20px 0 20px; /* Removendo o preenchimento superior para acomodar melhor o vídeo */
   flex: 0.5;
   background-color: #fff;
+  overflow-y: hidden;
 }
+
+.container .video .ose-youtube {
+  width: 100%; /* Definindo largura de 100% para ocupar todo o espaço disponível */
+  height: 100%; /* Definindo altura de 100% para ocupar todo o espaço disponível */
+}
+
+.container .video iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 
 .container .video #texto-video {
   font-size: 25px;
-  margin-bottom: 15px;
   text-align: center;
-  margin-right: auto;
+  margin: 40px auto 15px 0;
 }
 
  /* Lista animada */
@@ -375,27 +388,27 @@ background: linear-gradient(90deg, rgba(122,189,117,1) 10%, rgba(22,171,82,1) 50
 
 [data-anime="left1"]{
   transform: translate3d(-50px, 0, 0);
-  transition: .6s;
+  transition: .3s;
 }
 
 [data-anime="left2"]{
   transform: translate3d(-50px, 0, 0);
-  transition: .8s;
+  transition: .3s;
 }
 
 [data-anime="left3"]{
   transform: translate3d(-50px, 0, 0);
-  transition: .6s;
+  transition: .3s;
 }
 
 [data-anime="left4"]{
   transform: translate3d(-50px, 0, 0);
-  transition: 1s;
+  transition: .3s;
 }
 
 [data-anime="right"]{
   transform: translate3d(50px, 0, 0);
-  transition: 1.2s;
+  transition: .3s;
 }
 
 [data-anime].animate{
@@ -419,9 +432,9 @@ background: linear-gradient(90deg, rgba(122,189,117,1) 10%, rgba(22,171,82,1) 50
 }
 
 .container .cadastro button {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
-    padding: 20px 250px;
+    padding: 30px 500px;
     background: #008937;
     cursor: pointer;
     outline: none;
@@ -433,19 +446,19 @@ background: linear-gradient(90deg, rgba(122,189,117,1) 10%, rgba(22,171,82,1) 50
     
 }
 
-.container .cadastro button a {
+.container .cadastro a button{
     color: white;
     text-decoration: none;
 }
 
-.container .cadastro button:hover {
+.container .cadastro a:hover button{
     background-color: #9CCE98;
     color: #16ab52;
     border: 2px solid #008937;
 }
 
-.container .cadastro button:hover a {
-    color: #008937;
+.container .cadastro a:hover button {
+    color: #02682b;
 }
 
 .container .provas-sociais {
@@ -467,7 +480,7 @@ background: linear-gradient(90deg, rgba(122,189,117,1) 10%, rgba(22,171,82,1) 50
 
 .container .provas-sociais .provasocial .todosalunos {
     text-align: center;
-    margin: 0 20px;
+    margin: 0 50px;
     border: 1px solid black;
     padding: 20px;
     list-style: none;
@@ -475,6 +488,7 @@ background: linear-gradient(90deg, rgba(122,189,117,1) 10%, rgba(22,171,82,1) 50
     flex-direction: column;
     align-items: center;
     background-color: #fff;
+    font-size: 20px;
     
 }
 
@@ -483,8 +497,8 @@ background: linear-gradient(90deg, rgba(122,189,117,1) 10%, rgba(22,171,82,1) 50
 }
 
 .todosalunos img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin-bottom: 0.5rem;
     order: -1;
@@ -511,34 +525,21 @@ background: linear-gradient(90deg, rgba(122,189,117,1) 10%, rgba(22,171,82,1) 50
 
   .final-left .icons {
     display: flex;
-    margin-top: 30px;
-    margin-left: 35px;
-    margin-right: 10px;
+    margin: 3vh 0 2vh 5vh;
     gap: 30px;
   }
 
   .final-right{
     display: block;
     text-align: right;
-    margin-right: 50px;
     font-size: 20px;
     word-spacing: 25px;
-    margin-top: -25px;
-    position: relative;
+    margin: -2% 50px 0 0;
   }
 
   .final-right a{
     text-decoration: none;
   }
-
-  .final-right img{
-    height: 100px;
-    position: absolute;
-    display: block;
-    right: 0;
-    margin-right: -75px;
-    bottom: 100px;
-}
 
 .popup {
   display: none;
@@ -586,4 +587,13 @@ background: linear-gradient(90deg, rgba(122,189,117,1) 10%, rgba(22,171,82,1) 50
   margin: 10px 0;
 }
 
-
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 99;
+}
